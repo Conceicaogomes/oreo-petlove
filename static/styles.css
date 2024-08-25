@@ -1,0 +1,160 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #003366; /* Azul escuro para o fundo */
+    overflow-x: hidden; /* Evitar rolagem horizontal */
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Banner Home */
+.home-banner {
+    position: relative;
+    text-align: center;
+    background-image: url('{{ url_for('static', filename='oreo_home.jpg.jpeg') }}');
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Ajuste conforme necessário */
+}
+
+.banner-title {
+    position: absolute;
+    top: 10%; /* Ajustado para estar mais centralizado verticalmente */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Texto Introdutório */
+.intro-text {
+    padding: 20px;
+    background-color: #003366; /* Azul escuro para o fundo do texto */
+    color: white;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza horizontal e verticalmente */
+}
+
+/* Marcação de Consulta */
+.centered-title {
+    text-align: center;
+    margin: 20px 0;
+    color: #fff; /* Cor do texto dos títulos */
+    font-size: 2em;
+}
+
+.appointment-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.appointment-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-form label {
+    color: white; /* Cor dos rótulos dos campos */
+    margin-bottom: 5px;
+}
+
+.appointment-form input, .appointment-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.appointment-form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.appointment-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Contato */
+.contact-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: white; /* Cor dos rótulos dos campos */
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

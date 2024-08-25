@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oreo Petlove</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function mostrarInformacao(raca) {
+            document.querySelectorAll('.raça-info').forEach(function(info) {
+                info.classList.remove('show');
+            });
+            document.getElementById(raca).classList.add('show');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Oreo Petlove</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">Sobre Raças</a></li>
+                <li><a href="{{ url_for('contact') }}">Contato</a></li>
+                <li><a href="{{ url_for('appointment') }}">Marcação de Consulta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        &copy; 2024 Oreo Petlove. Todos os direitos reservados.
+    </footer>
+</body>
+</html>

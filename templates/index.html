@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oreo Petlove</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Oreo Petlove</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('appointment') }}">Marcação de Consulta</a></li>
+                <li><a href="{{ url_for('contact') }}">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Home -->
+        <div class="home-banner">
+            <div class="banner-title">Bem-vindo ao Oreo Petlove</div>
+        </div>
+
+        <div class="intro-text">
+            <p>Na Oreo Petlove, oferecemos cuidados veterinários excepcionais para seus pets com um atendimento carinhoso e profissional. Nossa equipe de especialistas está aqui para garantir a saúde e o bem-estar do seu amigo de quatro patas. Com instalações modernas e uma equipe apaixonada, estamos comprometidos em proporcionar o melhor para os seus animais de estimação. Junte-se à nossa família de pets felizes e saudáveis!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Oreo Petlove. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

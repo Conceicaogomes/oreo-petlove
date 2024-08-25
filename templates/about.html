@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oreo PetLove - Sobre Raças</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Oreo PetLove</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('appointment') }}">Marcação de Consulta</a></li>
+                <li><a href="{{ url_for('about') }}">Sobre Raças</a></li>
+                <li><a href="{{ url_for('contact') }}">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="about-section">
+        <h2 class="section-title">Sobre as Raças</h2>
+        <div class="race-container">
+            {% for key, raza in racas.items() %}
+            <div class="race-info" id="{{ key }}">
+                <img src="{{ url_for('static', filename=raza.imagem) }}" alt="{{ raza.nome }}">
+                <h2>{{ raza.nome }}</h2>
+                <p>{{ raza.descricao }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Oreo PetLove. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
